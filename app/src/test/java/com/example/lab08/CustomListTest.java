@@ -1,13 +1,14 @@
 package com.example.lab08;
 
 import org.junit.Before;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 public class CustomListTest {
     private CustomList cityList;
 
-    @Before
-    public void before() {
+    @BeforeEach
+    public void beforeEach() {
         this.cityList = new CustomList();
     }
 
@@ -22,4 +23,5 @@ public class CustomListTest {
         assertTrue(cityList.hasCity(edmonton));
         assertFalse(cityList.hasCity(calgary));
     }
+
 }
