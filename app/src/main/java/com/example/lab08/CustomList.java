@@ -19,11 +19,15 @@ public class CustomList {
     }
 
     public boolean deleteCity(City city) {
+        if (cities.contains(city)) {
+            cities.remove(city);
+            return true;
+        }
         return false;
     }
 
-    public int countCities(){
-        return -1;
+    public int countCities() {
+        return cities.size();
     }
 
     // Will be implemented later using TDD (leave blank for now)
