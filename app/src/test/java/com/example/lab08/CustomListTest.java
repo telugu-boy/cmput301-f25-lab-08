@@ -41,21 +41,21 @@ public class CustomListTest {
 
     @Test
     public void Test_countCities(){
-        assertEquals(cityList.countCities(), 0);
+        assertEquals(0, cityList.countCities());
 
         City edmonton = new City("Edmonton", "Alberta");
         City calgary = new City("Calgary", "Alberta");
 
         cityList.addCity(edmonton);
-        assertEquals(cityList.countCities(), 1);
+        assertEquals(1, cityList.countCities());
 
         cityList.addCity(calgary);
-        assertEquals(cityList.countCities(), 2);
+        assertEquals(2, cityList.countCities());
 
         cityList.deleteCity(edmonton);
-        assertEquals(cityList.countCities(), 1);
+        assertEquals(1, cityList.countCities());
 
         cityList.deleteCity(calgary);
-        assertEquals(cityList.countCities(), 0);
+        assertEquals(0, cityList.countCities());
     }
 }
