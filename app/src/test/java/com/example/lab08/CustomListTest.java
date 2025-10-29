@@ -24,4 +24,38 @@ public class CustomListTest {
         assertFalse(cityList.hasCity(calgary));
     }
 
+
+    @Test
+    public void Test_deleteCity(){
+        City edmonton = new City("Edmonton", "Alberta");
+        City calgary = new City("Calgary", "Alberta");
+
+        cityList.addCity(edmonton);
+        cityList.addCity(calgary);
+
+        cityList.deleteCity(edmonton);
+
+        assertFalse(cityList.hasCity(edmonton));
+        assertTrue(cityList.hasCity(calgary));
+    }
+
+    @Test
+    public void Test_countCities(){
+        assertEquals(cityList.countCities(), 0);
+
+        City edmonton = new City("Edmonton", "Alberta");
+        City calgary = new City("Calgary", "Alberta");
+
+        cityList.addCity(edmonton);
+        assertEquals(cityList.countCities(), 1);
+
+        cityList.addCity(calgary);
+        assertEquals(cityList.countCities(), 2);
+
+        cityList.deleteCity(edmonton);
+        assertEquals(cityList.countCities(), 1);
+
+        cityList.deleteCity(calgary);
+        assertEquals(cityList.countCities(), 0);
+    }
 }
