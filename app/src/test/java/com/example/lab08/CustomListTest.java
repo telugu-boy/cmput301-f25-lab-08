@@ -19,7 +19,7 @@ public class CustomListTest {
 
         cityList.addCity(edmonton);
 
-        assertTrue(cityListadd .hasCity(edmonton));
+        assertTrue(cityList.hasCity(edmonton));
         assertFalse(cityList.hasCity(calgary));
     }
 }
